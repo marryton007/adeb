@@ -15,7 +15,7 @@ SKIP_DEVICE=$8		# Skip any device-specific stages
 VARIANT="--variant=minbase"
 
 time qemu-debootstrap --arch $ARCH --include=$PACKAGES $VARIANT \
-	$DISTRO $OUT_TMP http://ftp.us.debian.org/debian/
+	$DISTRO $OUT_TMP http://mirrors.aliyun.com/debian/
 
 # Some reason debootstrap leaves these mounted
 umount $OUT_TMP/proc/sys/fs/binfmt_misc || true
@@ -57,7 +57,7 @@ else
 fi
 
 # Add a default DNS server
-echo "nameserver 4.2.2.2" > $OUT_TMP/etc/resolv.conf
+echo "nameserver 114.114.114.114" > $OUT_TMP/etc/resolv.conf
 
 # Clone BCC if needed
 if [ $INSTALL_BCC -eq 1 ]; then

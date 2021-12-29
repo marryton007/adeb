@@ -1,3 +1,7 @@
 PACKAGES+="\
 xz-utils
+lsof
+iproute2
+sysstat
+htop
 "
