@@ -3,4 +3,8 @@ linux-perf
 trace-cmd
 strace
 crash
+auditd
+sshfs
+bpftrace
+bpfcc-tools
 "
